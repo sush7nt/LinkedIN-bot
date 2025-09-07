@@ -4,6 +4,8 @@ const { chromium } = require("playwright");
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.json());
+
 
 app.post("/submit", async (req, res) => {
   const { problemUrl, solution } = req.body;
